@@ -149,10 +149,16 @@ h1{
     transform: translateX(20px);
 }
 
-#open,.barre:hover{
+.svg:hover rect.barre{
     transform: translateY(8px) .9s;
     -webkit-transform: translateY(8px);
     transition: transform .8s cubic-bezier(.25, .1, .25, 1);
+}
+
+.svg:hover rect.barre2{
+  transform: translateY(-8px) .9s;
+  -webkit-transform: translateY(-8px);
+  transition: transform .8s cubic-bezier(.25, .1, .25, 1);
 }
 
 /* .barre2{
@@ -162,11 +168,11 @@ h1{
     margin-top: 8px;
 } */
 
-#open,.barre2:hover{
+/* #open,.barre2:hover{
     transform: translateY(-8px);
     -webkit-transform: translateY(-8px);
     transition: transform .8s cubic-bezier(.25, .1, .25, 1);
-}
+} */
 
 
 .sections {
