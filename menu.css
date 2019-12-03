@@ -1,3 +1,4 @@
+/* ----GENERAL---- */
 
 *{
     margin: 0px;
@@ -8,6 +9,7 @@ html{
     background-color: black;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 body{
@@ -16,14 +18,7 @@ body{
     height: 100%;
 }
 
-/* section{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-} */
-
+/* --------------- BACKGROUND --------------------*/
 
 h1{
     font-family: 'Source Sans Pro', sans-serif;
@@ -32,28 +27,45 @@ h1{
     margin-left: 200px;
 }
 
+.main {
+  padding: 25px;
+  margin-left: 35px;
+  margin-top: 280px;
+}
 
-/* .navigation{
-    background-color: black;
-    position: fixed;
-    padding: 0 60px;
-    width: 100%;
-    opacity: 0.5;
-    height: 100%;
-    transition: transform .6s ease-in-out;
-    -webkit-transition: transform .6s ease-in-out;
-    transform: background-color, translateX(100%);
-    -webkit-transform: translateX(100%);
-} */
+/* --------------- WRAP MENU --------------------*/
 
+.header {
+  position: absolute;
+  background: #CE0033;
+  height: 100vh;
+  /* padding: 0 20px; */
+  display:inline-block;
+  vertical-align:top;
+}
+
+.header{
+  width: 100%;
+}
+
+.nav{
+    margin: 25px;
+}
+
+/* --------------  menu -------------*/
+
+.navigation{
+  margin-left: 50px;
+}
 
 .navigation ul{
     /* position: absolute; */
-    top: 50%;  
+    top: 50%; 
+    margin: 50px; 
 }
 
 .navigation ul li{
-    margin: 10px 0;   
+    /* margin: 10px 0;    */
     list-style: none;
 }
 
@@ -68,9 +80,9 @@ h1{
     text-transform: uppercase;
 }
 
+/*----------- */
+
 #wrap {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 21px;
     line-height: 1.6;
     margin: 0;
     display: flex;
@@ -87,12 +99,12 @@ h1{
     transform: translate3d(0vw, 0, 0);
   }
   
-  #open{
+  /* #open{
     height: 44px;
     text-align: left;
     display: block;
     margin-left: -20px;
-  }
+  } */
   
   #close{
     height: 44px;
@@ -100,7 +112,14 @@ h1{
     display: block;
     margin-left: 20px;
     font-size: 40px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+  }
+
+  a#close{
+    text-decoration: none;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+
   }
   
   #wrap:target #open,
@@ -111,55 +130,30 @@ h1{
   #wrap:target #open {
     display: none;
   }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-left: 40px;
-  }
-  
-  .header {
-    position: absolute;
-    background: #CE0033;
-    width: 100vw;
-    height: 100vh;
-    padding: 0 20px;
-    display:inline-block;
-    vertical-align:top;
-  }
-  
-  .nav {
-    padding: 25px;
-  }
-  
-  .main {
-    padding: 25px;
-    flex: 1;
-    display:inline-block;
-    margin-left: 35px;
-    margin-top: 280px;
-  }
+ 
 
+
+/* -----------------  top barre size -----------*/
  .barre{
-    /* width: 22px;
-    height: 4px;
-    background: #ffffff;
-    margin-top: 6px; */
     transform: translateX(20px);
 }
 
+/* -----------------  top barre hover transform -------*/
 .svg:hover rect.barre{
-    transform: translateY(8px) .9s;
-    -webkit-transform: translateY(8px);
+    transform: translateY(5px) .9s;
+    -webkit-transform: translateY(5px);
     transition: transform .8s cubic-bezier(.25, .1, .25, 1);
 }
 
+/* ---------------  bottom barre hover transform -------*/
 .svg:hover rect.barre2{
-  transform: translateY(-8px) .9s;
-  -webkit-transform: translateY(-8px);
+  transform: translateY(-6px) .9s;
+  -webkit-transform: translateY(-6px);
   transition: transform .8s cubic-bezier(.25, .1, .25, 1);
 }
+
+
+
 
 /* .barre2{
     width: 35px;
@@ -175,16 +169,26 @@ h1{
 } */
 
 
+/* .navigation{
+    background-color: black;
+    position: fixed;
+    padding: 0 60px;
+    width: 100%;
+    opacity: 0.5;
+    height: 100%;
+    transition: transform .6s ease-in-out;
+    -webkit-transition: transform .6s ease-in-out;
+    transform: background-color, translateX(100%);
+    -webkit-transform: translateX(100%);
+} */
+
+
+/* ------------- wrap 2 -------------- */
+
 .sections {
-    /* width: 100vw; */
-    display:inline-block;
-    vertical-align:top;
-  }
-
-
-a#close{
-    text-decoration: none;
-    color: white;
+  /* width: 100vw; */
+  display:inline-block;
+  vertical-align:top;
 }
 
 #wrap2{
@@ -204,4 +208,16 @@ a#close{
   
   #wrap2:target {
     transform: translate3d(0vw, 0, 0);
+  }
+
+
+
+  /* ---------------- responsive ------------------- */
+
+  @media screen and (max-width: 1480px){
+
+    .header{
+      left: -65px;
+    }
+
   }
